@@ -81,13 +81,11 @@ $(OBJPATH)/%.o : $(SRCPATH)/%.c $(INC_DEP)
 clean :
 	@echo "$(END)$(RED)# removing $(NAME) objects #$(END)$(GREY)"
 	rm -rf $(OBJ)
-	@echo "$(END)$(RED)# removing ps_instructions objects #$(END)"
 	@make clean -C $(PS_INSTRUCTIONS_PATH)
 
 fclean : clean
 	@echo "$(END)$(RED)\n# removing $(NAME) #$(END)$(GREY)"
 	@rm -f $(NAME)
-	@echo "$(END)$(RED)\n# removing ps_instructions.a #$(END)"
 	@make fclean -C $(PS_INSTRUCTIONS_PATH)
 
 re : fclean all
