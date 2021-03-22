@@ -20,7 +20,6 @@ static t_two_stacks	*init_stack(int ac, char *av[])
 	free(arr);
 	printf("stacksize : %d\ttop_a: %d\ttop_b: %d\n", \
 	stack->stack_size, stack->top_a, stack->top_b);
-	ft_push_b(stack, 40);
 	ft_print_two_stacks(stack);
 	return (stack);
 }
@@ -32,7 +31,6 @@ int	main(int ac, char *av[])
 	stack = init_stack(ac, av);
 	if (!stack)
 		return (1);
-	ps_pb(stack);
 	ft_print_two_stacks(stack);
 	ft_free_two_stacks(stack);
 	return (0);

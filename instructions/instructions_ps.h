@@ -37,5 +37,11 @@ void			ps_sb(t_two_stacks *s);
 void			ps_ss(t_two_stacks *s);
 void			ps_pa(t_two_stacks *s);
 void			ps_pb(t_two_stacks *s);
+void			ps_ra(t_two_stacks *s);
+void			ps_rb(t_two_stacks *s);
+void			ps_rr(t_two_stacks *s);
+void			ps_rra(t_two_stacks *s);
+void			ps_rrb(t_two_stacks *s);
+void			ps_rrr(t_two_stacks *s);
 
 #endif
