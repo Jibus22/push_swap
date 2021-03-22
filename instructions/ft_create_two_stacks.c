@@ -9,7 +9,7 @@ t_two_stacks	*ft_create_two_stacks(unsigned int stacksize)
 	stack = (t_two_stacks *)malloc(sizeof(*stack));
 	if (!stack)
 		return (NULL);
-	stack->array = (int *)malloc(sizeof(*(stack->array) * stacksize));
+	stack->array = (int *)malloc(sizeof(*(stack->array)) * stacksize);
 	if (!stack->array)
 	{
 		free(stack);
