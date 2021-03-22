@@ -16,8 +16,8 @@ t_two_stacks	*ft_create_two_stacks(unsigned int stacksize)
 		return (NULL);
 	}
 	ft_memset(stack->array, 0, sizeof(char));
-	stack->top_a = 0;
-	stack->top_b = stacksize - 1;
+	stack->top_a = -1;
+	stack->top_b = stacksize;
 	stack->stack_size = stacksize;
 	return (stack);
 }

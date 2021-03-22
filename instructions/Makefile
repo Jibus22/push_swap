@@ -23,7 +23,9 @@ INC_LIBFT = $(LIBFTPATH)
 LIBFT = $(LIBFTPATH)/libft.a
 
 ##### SRCS #####
-SRC = $(addprefix $(SRCPATH)/, ft_create_two_stacks.c)
+SRC = $(addprefix $(SRCPATH)/, ft_create_two_stacks.c ft_push_a.c ft_push_b.c \
+	  ft_stack_utils.c convert_argv_to_int_array.c fill_stack_with_int_array.c \
+	  ft_pop_a.c ft_pop_b.c)
 
 ##### OBJS #####
 OBJ = $(SRC:%.c=$(OBJDIR)/%.o)
