@@ -22,8 +22,12 @@ t_two_stacks	*init_stack(int ac, char *av[])
 	}
 	fill_stack_with_int_array(stack, arr, size_array);
 	free(arr);
-	printf("stacksize : %d\ttop_a: %d\ttop_b: %d\n", \
-	stack->stack_size, stack->top_a, stack->top_b);
-	ft_print_two_stacks(stack);
 	return (stack);
 }
+
+/*
+**	printf("stacksize : %d\ttop_a: %d\ttop_b: %d\n", \
+**	stack->stack_size, stack->top_a, stack->top_b);
+**	ft_print_two_stacks(stack);
+**
+*/

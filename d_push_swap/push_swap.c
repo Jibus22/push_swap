@@ -2,10 +2,12 @@
 
 int	main(int ac, char *av[])
 {
+	//t_list			*instructions;
 	t_two_stacks	*stack;
+	//int				ret;
 
-	(void)av;
-	stack = ft_create_two_stacks(ac + 1);
-	printf("POUET\n");
-	return (0);
+	stack = init_stack(ac, av);
+	if (!stack)
+		return (1);
+	ft_print_two_stacks(stack);
 }
