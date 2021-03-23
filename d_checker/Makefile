@@ -42,9 +42,10 @@ else
 	FLAGS += -D LINUX
 endif
 
-#SRCS
-SRCS = $(addprefix $(SRCPATH)/, checker.c)
-##### OBJS #####
+##### SRCS #####
+SRCS = $(addprefix $(SRCPATH)/, checker.c execute_instructions.c \
+	   verify_instructions.c check_stacks.c)
+
 OBJ = $(SRCS:$(SRCPATH)/%.c=$(OBJPATH)/%.o)
 
 

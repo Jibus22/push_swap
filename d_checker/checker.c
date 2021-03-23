@@ -1,37 +1,62 @@
 #include "checker.h"
 
-static t_two_stacks	*init_stack(int ac, char *av[])
+void	clear_instructions(void *content)
 {
-	t_two_stacks	*stack;
-	int				*arr;
-	int				size_array;
+	free((char *)content);
+}
 
-	if (ac < 2)
+static int	add_instruction_to_list(t_list **head, char *line)
+{
+	t_list	*new;
+
+	new = ft_lstnew(line);
+	if (!new)
+		return (-1);
+	ft_lstadd_back(head, new);
+	return (0);
+}
+
+static t_list	*loop(void)
+{
+	t_list	*instructions;
+	char	*line;
+	int		ret;
+
+	instructions = NULL;
+	while (1)
 	{
-		printf("%s error: at least one argument needed.\n", *av);
-		return (NULL);
+		ret = get_next_line(0, &line);
+		if (ret < 0 || !*line)
+			break ;
+		if (add_instruction_to_list(&instructions, line) == -1)
+		{
+			free(line);
+			ft_lstclear(&instructions, &clear_instructions);
+			return (NULL);
+		}
 	}
-	size_array = ac - 1;
-	stack = ft_create_two_stacks(ac + 4);
-	if (!stack)
-		return (NULL);
-	arr = convert_argv_to_int_array(size_array, av);
-	fill_stack_with_int_array(stack, arr, size_array);
-	free(arr);
-	printf("stacksize : %d\ttop_a: %d\ttop_b: %d\n", \
-	stack->stack_size, stack->top_a, stack->top_b);
-	ft_print_two_stacks(stack);
-	return (stack);
+	free(line);
+	return (instructions);
 }
 
 int	main(int ac, char *av[])
 {
+	t_list			*instructions;
 	t_two_stacks	*stack;
+	int				ret;
 
 	stack = init_stack(ac, av);
 	if (!stack)
 		return (1);
 	ft_print_two_stacks(stack);
+	instructions = loop();
+	if (!instructions)
+		return (1);
+	ret = execute_instructions(instructions, stack);
+	if (ret != -1)
+		check_stacks(stack);
+	ft_lstclear(&instructions, &clear_instructions);
 	ft_free_two_stacks(stack);
+	//system("leaks checker");
 	return (0);
 }
