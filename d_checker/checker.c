@@ -48,7 +48,7 @@ int	main(int ac, char *av[])
 	stack = init_stack(ac, av);
 	if (!stack)
 		return (1);
-	ft_print_two_stacks(stack);
+	//ft_print_two_stacks(stack);
 	instructions = loop();
 	if (!instructions)
 		return (1);

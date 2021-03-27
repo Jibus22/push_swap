@@ -42,8 +42,11 @@ else
 	FLAGS += -D LINUX
 endif
 
-#SRCS
-SRCS = $(addprefix $(SRCPATH)/, push_swap.c)
+##### SRCS #####
+SRCS = $(addprefix $(SRCPATH)/, push_swap.c noisy_ps.c noisy_ps_rotate.c \
+	   noisy_ps_rev_rotate.c noisy_ps_push.c sort_two_three.c execute_n_ps.c \
+	   sort_four_five.c)
+
 ##### OBJS #####
 OBJ = $(SRCS:$(SRCPATH)/%.c=$(OBJPATH)/%.o)
 
@@ -80,7 +83,7 @@ $(OBJPATH)/%.o : $(SRCPATH)/%.c $(INC_DEP)
 
 clean :
 	@echo "$(END)$(RED)# removing $(NAME) objects #$(END)$(GREY)"
-	rm -rf $(OBJ)
+	@rm -rf $(OBJ)
 	@make clean -C $(PS_INSTRUCTIONS_PATH)
 
 fclean : clean

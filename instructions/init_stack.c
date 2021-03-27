@@ -9,7 +9,7 @@ t_two_stacks	*init_stack(int ac, char *av[])
 	if (ac < 2)
 		return (NULL);
 	size_array = ac - 1;
-	stack = ft_create_two_stacks(ac + 4);
+	stack = ft_create_two_stacks(ac - 1);
 	if (!stack)
 		return (NULL);
 	arr = convert_argv_to_int_array(size_array, av);

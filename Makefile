@@ -1,3 +1,6 @@
+NAME_CHECKER = checker
+NAME_PUSH_SWAP = push_swap
+
 ##### COLORS #####
 BLUE = \033[1;35m
 GREY = \033[3;31m
@@ -11,17 +14,18 @@ CHECKER = $(CHECKERPATH)/checker
 PUSH_SWAP_PATH = ./d_push_swap
 PUSH_SWAP = $(PUSH_SWAP_PATH)/push_swap
 
+
 ### RULES ###
+.PHONY : $(NAME_CHECKER) $(NAME_PUSH_SWAP)
 
-all : mk_checker mk_push_swap
+all : $(NAME_CHECKER) $(NAME_PUSH_SWAP)
 
-
-mk_checker:
-	@if [ ! -f $(CHECKER) ]; then make -C $(CHECKERPATH); fi
+$(NAME_CHECKER):
+	@make -C $(CHECKERPATH)
 	@cp $(CHECKER) .
 
-mk_push_swap:
-	@if [ ! -f $(PUSH_SWAP) ]; then make -C $(PUSH_SWAP_PATH); fi
+$(NAME_PUSH_SWAP):
+	@make -C $(PUSH_SWAP_PATH)
 	@cp $(PUSH_SWAP) .
 
 
@@ -34,8 +38,8 @@ clean :
 
 fclean : clean
 	@make fclean -C $(CHECKERPATH)
-	@rm -f checker
+	@rm -f $(NAME_CHECKER)
 	@make fclean -C $(PUSH_SWAP_PATH)
-	@rm -f push_swap
+	@rm -f $(NAME_PUSH_SWAP)
 
 re : fclean all
