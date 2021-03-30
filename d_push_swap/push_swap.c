@@ -16,6 +16,8 @@ int	main(int ac, char *av[])
 		sort_four(stack);
 	if (stack->stack_size == 5)
 		sort_five(stack);
+	else
+		algo_100(stack);
 	//ft_print_two_stacks(stack);
 	return (0);
 }

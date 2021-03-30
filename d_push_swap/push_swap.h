@@ -32,12 +32,19 @@ void		sort_five(t_two_stacks *s);
 int			switch_bth_a(t_two_stacks *s);
 void		execute_n_ps(t_two_stacks *s, int code);
 
+void		algo_100(t_two_stacks *stack);
+long		ft_diff(int a, int b);
+int			ft_less(int a, int b);
+
 /*
 ** tools
 */
 
 int			index_biggest_a(t_two_stacks *s);
 int			index_smallest_a(t_two_stacks *s);
+int			get_bigger_a(t_two_stacks *stack);
+int			get_smaller_a(t_two_stacks *stack);
+int			is_b_empty(t_two_stacks *s);
 
 /*
 ** Noisy push_swap instructions
