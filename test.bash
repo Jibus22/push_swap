@@ -6,6 +6,13 @@ random10 () {
 	done
 }
 
+random30 () {
+	for i in `seq 30`
+	do
+		echo $RANDOM
+	done
+}
+
 random50 () {
 	for i in `seq 50`
 	do
@@ -38,6 +45,8 @@ ARG="3 2 1"
 if [ $1 ]; then
 	if [ $1 == 10 ]; then
 		ARG=$(random10);
+	elif [ $1 == 30 ]; then
+		ARG=$(random30);
 	elif [ $1 == 50 ]; then
 		ARG=$(random50);
 	elif [ $1 == 100 ]; then
