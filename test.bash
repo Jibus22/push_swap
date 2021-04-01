@@ -1,4 +1,5 @@
 #!/bin/bash
+
 random10 () {
 	for i in `seq 10`
 	do
@@ -56,6 +57,6 @@ if [ $1 ]; then
 	fi
 fi
 
-#echo $ARG
+echo $ARG > log.txt
 
 ./push_swap $ARG | wc -l ; ./push_swap $ARG | ./checker $ARG

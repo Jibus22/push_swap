@@ -35,6 +35,9 @@ void		execute_n_ps(t_two_stacks *s, int code);
 void		algo_100(t_two_stacks *stack);
 long		ft_diff(int a, int b);
 int			ft_less(int a, int b);
+int			is_a_sorted(t_two_stacks *s, int min, int max);
+int			full_b(t_two_stacks *s);
+int			full_a(t_two_stacks *s);
 
 /*
 ** tools
