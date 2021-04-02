@@ -35,7 +35,7 @@ static t_list	*loop(t_two_stacks *s)
 			return (NULL);
 		}
 		execute_it(s, which_instruction(line));
-		ft_print_two_stacks(s);
+		//ft_print_two_stacks(s);
 	}
 	free(line);
 	return (instructions);
@@ -50,7 +50,7 @@ int	main(int ac, char *av[])
 	stack = init_stack(ac, av);
 	if (!stack)
 		return (1);
-	ft_print_two_stacks(stack);
+	//ft_print_two_stacks(stack);
 	instructions = loop(stack);
 	if (!instructions)
 		return (1);
