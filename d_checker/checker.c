@@ -34,10 +34,11 @@ static t_list	*loop(t_two_stacks *s)
 			ft_lstclear(&instructions, &clear_instructions);
 			return (NULL);
 		}
-		execute_it(s, which_instruction(line));
+		//execute_it(s, which_instruction(line));
 		//ft_print_two_stacks(s);
 	}
 	free(line);
+	(void)s;
 	return (instructions);
 }
 
@@ -55,7 +56,7 @@ int	main(int ac, char *av[])
 	if (!instructions)
 		return (1);
 	ret = 0;
-	//ret = execute_instructions(instructions, stack);
+	ret = execute_instructions(instructions, stack);
 	if (ret != -1)
 		check_stacks(stack);
 	ft_lstclear(&instructions, &clear_instructions);
