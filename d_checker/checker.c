@@ -16,7 +16,7 @@ static int	add_instruction_to_list(t_list **head, char *line)
 	return (0);
 }
 
-static t_list	*loop(void)
+static t_list	*loop(t_two_stacks *s)
 {
 	t_list	*instructions;
 	char	*line;
@@ -34,6 +34,8 @@ static t_list	*loop(void)
 			ft_lstclear(&instructions, &clear_instructions);
 			return (NULL);
 		}
+		execute_it(s, which_instruction(line));
+		ft_print_two_stacks(s);
 	}
 	free(line);
 	return (instructions);
@@ -48,11 +50,12 @@ int	main(int ac, char *av[])
 	stack = init_stack(ac, av);
 	if (!stack)
 		return (1);
-	//ft_print_two_stacks(stack);
-	instructions = loop();
+	ft_print_two_stacks(stack);
+	instructions = loop(stack);
 	if (!instructions)
 		return (1);
-	ret = execute_instructions(instructions, stack);
+	ret = 0;
+	//ret = execute_instructions(instructions, stack);
 	if (ret != -1)
 		check_stacks(stack);
 	ft_lstclear(&instructions, &clear_instructions);

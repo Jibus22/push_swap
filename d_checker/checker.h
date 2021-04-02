@@ -27,5 +27,7 @@
 int		execute_instructions(t_list *instructions, t_two_stacks *s);
 int		verify_instructions(t_list *instructions);
 void	check_stacks(t_two_stacks *s);
+void	execute_it(t_two_stacks *s, int code);
+int		which_instruction(char *instr);
 
 #endif
