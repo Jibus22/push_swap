@@ -22,6 +22,23 @@
 # define ALGO_S3 12
 
 /*
+** push_swap structure
+*/
+
+typedef struct s_moves
+{
+	int	index_a;
+	int	way_a;
+	int	moves_a;
+	int	index_b;
+	int	way_b;
+	int	moves_b;
+	int common_moves;
+	int	common_way;
+	int total_moves;
+}	t_moves;
+
+/*
 ** push_swap algos
 */
 
@@ -35,9 +52,13 @@ void		execute_n_ps(t_two_stacks *s, int code);
 void		algo_100(t_two_stacks *stack);
 long		ft_diff(int a, int b);
 int			ft_less(int a, int b);
+int			ft_more(int a, int b);
 int			is_a_sorted(t_two_stacks *s, int min, int max);
 int			full_b(t_two_stacks *s);
 int			full_a(t_two_stacks *s);
+
+int			algo_v4(t_two_stacks *stack);
+int			seek_best_position_to_pb(t_two_stacks *s, int index_a, t_moves *tmp);
 
 /*
 ** tools
@@ -48,6 +69,7 @@ int			index_smallest_a(t_two_stacks *s);
 int			get_bigger_a(t_two_stacks *stack);
 int			get_smaller_a(t_two_stacks *stack);
 int			is_b_empty(t_two_stacks *s);
+int			is_a_empty(t_two_stacks *s);
 
 /*
 ** Noisy push_swap instructions

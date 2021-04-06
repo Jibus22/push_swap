@@ -8,16 +8,18 @@ int	main(int ac, char *av[])
 	if (!stack)
 		return (1);
 	//ft_print_two_stacks(stack);
-	if (stack->stack_size == 2)
+	/*if (stack->stack_size == 2)
 		sort_two(stack);
 	if (stack->stack_size == 3)
 		sort_three_a(stack);
 	if (stack->stack_size == 4)
 		sort_four(stack);
 	if (stack->stack_size == 5)
-		sort_five(stack);
-	else
-		algo_100(stack);
+		sort_five(stack);*/
+	/*else
+		algo_100(stack);*/
+	//else
+		algo_v4(stack);
 	//ft_print_two_stacks(stack);
 	return (0);
 }

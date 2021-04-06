@@ -38,14 +38,15 @@ ifeq ($(UNAME), Darwin)
 	# mac
 	FLAGS += -D DARWIN
 else
-	#Linus and others...
+	#Linux and others...
 	FLAGS += -D LINUX
 endif
 
 ##### SRCS #####
 SRCS = $(addprefix $(SRCPATH)/, push_swap.c noisy_ps.c noisy_ps_rotate.c \
 	   noisy_ps_rev_rotate.c noisy_ps_push.c sort_two_three.c execute_n_ps.c \
-	   sort_four_five.c utils.c smaller_bigger.c algo100.c full_b.c full_a.c)
+	   sort_four_five.c utils.c smaller_bigger.c algo100.c full_b.c full_a.c \
+	   algo_v4.c seek_best_position_to_pb.c)
 
 ##### OBJS #####
 OBJ = $(SRCS:$(SRCPATH)/%.c=$(OBJPATH)/%.o)
