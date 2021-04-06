@@ -19,7 +19,7 @@ int	main(int ac, char *av[])
 	/*else
 		algo_100(stack);*/
 	//else
-		algo_v4(stack);
+		algo_v5(stack);
 	//ft_print_two_stacks(stack);
 	return (0);
 }
