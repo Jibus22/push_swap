@@ -27,11 +27,13 @@
 
 typedef struct s_moves
 {
+	int	init;
 	int	index_a;
 	int	way_a;
 	int	moves_a;
 	int	index_b;
 	int	way_b;
+	int way_b_after;
 	int	moves_b;
 	int common_moves;
 	int	common_way;
@@ -58,6 +60,7 @@ int			full_b(t_two_stacks *s);
 int			full_a(t_two_stacks *s);
 
 int			algo_v4(t_two_stacks *stack);
+int			algo_v5(t_two_stacks *s);
 int			seek_best_position_to_pb(t_two_stacks *s, int index_a, t_moves *tmp);
 
 /*
