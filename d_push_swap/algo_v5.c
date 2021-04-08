@@ -228,6 +228,7 @@ int	algo_v5(t_two_stacks *s)
 		seek_best_move(s, &best, max_mv);
 		execute_best_move(s, &best);
 	}
+	full_a(s);
 	//ft_print_two_stacks(s);
 	return (0);
 }

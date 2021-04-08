@@ -60,6 +60,7 @@ int			algo_v5(t_two_stacks *s);
 int			move_cpy(t_moves *src, t_moves *dst);
 void		init_move(t_moves *mv);
 void		print_mv(t_moves *mv);
+int			full_a(t_two_stacks *s);
 
 /*
 ** tools
