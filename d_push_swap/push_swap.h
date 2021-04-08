@@ -51,17 +51,15 @@ void		sort_five(t_two_stacks *s);
 int			switch_bth_a(t_two_stacks *s);
 void		execute_n_ps(t_two_stacks *s, int code);
 
-void		algo_100(t_two_stacks *stack);
 long		ft_diff(int a, int b);
 int			ft_less(int a, int b);
 int			ft_more(int a, int b);
 int			is_a_sorted(t_two_stacks *s, int min, int max);
-int			full_b(t_two_stacks *s);
-int			full_a(t_two_stacks *s);
 
-int			algo_v4(t_two_stacks *stack);
 int			algo_v5(t_two_stacks *s);
-int			seek_best_position_to_pb(t_two_stacks *s, int index_a, t_moves *tmp);
+int			move_cpy(t_moves *src, t_moves *dst);
+void		init_move(t_moves *mv);
+void		print_mv(t_moves *mv);
 
 /*
 ** tools
