@@ -7,6 +7,18 @@ if [ $1 ]; then
 		ARG=$(python3 -c 'import random;\
 			randomlist = random.sample(range(-2147483648, 2147483647), 10);\
 			print(randomlist)' | tr -d ',[]')
+	elif [ $1 == 3 ]; then
+		ARG=$(python3 -c 'import random;\
+			randomlist = random.sample(range(-2147483648, 2147483647), 3);\
+			print(randomlist)' | tr -d ',[]')
+	elif [ $1 == 4 ]; then
+		ARG=$(python3 -c 'import random;\
+			randomlist = random.sample(range(-2147483648, 2147483647), 4);\
+			print(randomlist)' | tr -d ',[]')
+	elif [ $1 == 5 ]; then
+		ARG=$(python3 -c 'import random;\
+			randomlist = random.sample(range(-2147483648, 2147483647), 5);\
+			print(randomlist)' | tr -d ',[]')
 	elif [ $1 == 30 ]; then
 		ARG=$(python3 -c 'import random;\
 			randomlist = random.sample(range(-2147483648, 2147483647), 30);\
@@ -30,6 +42,6 @@ if [ $1 ]; then
 	fi
 fi
 
-echo $ARG > rand_nbrs.log
+echo $ARG > ./test/rand_nbrs.log
 
 ./push_swap $ARG | wc -l ; ./push_swap $ARG | ./checker $ARG

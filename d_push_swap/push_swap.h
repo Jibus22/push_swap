@@ -41,7 +41,7 @@ typedef struct s_moves
 }	t_moves;
 
 /*
-** push_swap algos
+** push_swap algos short stack
 */
 
 int			sort_two(t_two_stacks *s);
@@ -49,30 +49,52 @@ void		sort_three_a(t_two_stacks *s);
 void		sort_four(t_two_stacks *s);
 void		sort_five(t_two_stacks *s);
 int			switch_bth_a(t_two_stacks *s);
+
+/*
+** push_swap algos long stack
+*/
+
+int			algo_v5(t_two_stacks *s);
+int			set_b_way_bottom(t_two_stacks *s, t_moves *tmp);
+int			set_b_way_top(t_two_stacks *s, t_moves *tmp);
+int			set_a_way_top(t_two_stacks *s, t_moves *tmp);
+int			seek_place_in_b_for_a_value(t_two_stacks *s, t_moves *tmp, int val);
+int			set_move(t_two_stacks *s, t_moves *tmp, int index);
+int			full_a_v2(t_two_stacks *s);
+
+/*
+** utils algo
+*/
+
 void		execute_n_ps(t_two_stacks *s, int code);
+int			is_b_empty(t_two_stacks *s);
+int			is_a_empty(t_two_stacks *s);
+int			is_a_sorted(t_two_stacks *s, int min, int max);
+
+/*
+** utils move
+*/
+
+void		init_move(t_moves *mv);
+int			move_cpy(t_moves *src, t_moves *dst);
+void		print_mv(t_moves *mv);
+
+/*
+** utils
+*/
 
 long		ft_diff(int a, int b);
 int			ft_less(int a, int b);
 int			ft_more(int a, int b);
-int			is_a_sorted(t_two_stacks *s, int min, int max);
-
-int			algo_v5(t_two_stacks *s);
-int			move_cpy(t_moves *src, t_moves *dst);
-void		init_move(t_moves *mv);
-void		print_mv(t_moves *mv);
-int			full_a(t_two_stacks *s);
-int			full_a_v2(t_two_stacks *s);
 
 /*
-** tools
+** other utils
 */
 
 int			index_biggest_a(t_two_stacks *s);
 int			index_smallest_a(t_two_stacks *s);
 int			get_bigger_a(t_two_stacks *stack);
 int			get_smaller_a(t_two_stacks *stack);
-int			is_b_empty(t_two_stacks *s);
-int			is_a_empty(t_two_stacks *s);
 
 /*
 ** Noisy push_swap instructions

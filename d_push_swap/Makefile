@@ -46,7 +46,7 @@ endif
 SRCS = $(addprefix $(SRCPATH)/, push_swap.c noisy_ps.c noisy_ps_rotate.c \
 	   noisy_ps_rev_rotate.c noisy_ps_push.c sort_two_three.c execute_n_ps.c \
 	   sort_four_five.c utils.c smaller_bigger.c algo_v5.c algo_utils.c \
-	   full_a.c full_a_v2.c)
+	   full_a_v2.c set_moves_way.c seek_place_in_b_for_a_value.c set_moves.c)
 
 ##### OBJS #####
 OBJ = $(SRCS:$(SRCPATH)/%.c=$(OBJPATH)/%.o)
