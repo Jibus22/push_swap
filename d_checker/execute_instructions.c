@@ -67,8 +67,11 @@ int	execute_instructions(t_list *instructions, t_two_stacks *s)
 			return (-1);
 		}
 		execute_it(s, instruct_code);
-		//ft_print_two_stacks(s);
 		instructions = instructions->next;
 	}
 	return (0);
 }
+
+/*
+** ft_print_two_stacks(s);
+*/

@@ -26,7 +26,7 @@ static t_list	*loop(t_two_stacks *s)
 	while (1)
 	{
 		ret = get_next_line(0, &line);
-		if (ret < 0 || !*line)
+		if (ret <= 0)
 			break ;
 		if (add_instruction_to_list(&instructions, line) == -1)
 		{
@@ -34,8 +34,6 @@ static t_list	*loop(t_two_stacks *s)
 			ft_lstclear(&instructions, &clear_instructions);
 			return (NULL);
 		}
-		//execute_it(s, which_instruction(line));
-		//ft_print_two_stacks(s);
 	}
 	free(line);
 	(void)s;
@@ -51,16 +49,24 @@ int	main(int ac, char *av[])
 	stack = init_stack(ac, av);
 	if (!stack)
 		return (1);
-	//ft_print_two_stacks(stack);
 	instructions = loop(stack);
 	if (!instructions)
-		return (1);
+	{
+		check_stacks(stack);
+		return (0);
+	}
 	ret = 0;
 	ret = execute_instructions(instructions, stack);
 	if (ret != -1)
 		check_stacks(stack);
 	ft_lstclear(&instructions, &clear_instructions);
 	ft_free_two_stacks(stack);
-	//system("leaks checker");
 	return (0);
 }
+
+/*
+**		//execute_it(s, which_instruction(line));
+**		//ft_print_two_stacks(s);
+**	//ft_print_two_stacks(stack);
+**	//system("leaks checker");
+*/

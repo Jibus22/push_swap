@@ -7,6 +7,8 @@ int	main(int ac, char *av[])
 	stack = init_stack(ac, av);
 	if (!stack)
 		return (1);
+	if (is_stack_sorted(stack))
+		return (0);
 	if (stack->stack_size == 1)
 		;
 	else if (stack->stack_size == 2)

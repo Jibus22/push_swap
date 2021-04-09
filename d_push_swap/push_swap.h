@@ -86,6 +86,7 @@ void		print_mv(t_moves *mv);
 long		ft_diff(int a, int b);
 int			ft_less(int a, int b);
 int			ft_more(int a, int b);
+int			is_stack_sorted(t_two_stacks *s);
 
 /*
 ** other utils
