@@ -220,7 +220,7 @@ int	algo_v5(t_two_stacks *s)
 	t_moves best;
 	int		max_mv;
 
-	max_mv = s->stack_size * 8 / 100;
+	max_mv = s->stack_size * 30 / 100;
 	if (max_mv < 2)
 		max_mv += 1;
 	while (!is_a_empty(s))
