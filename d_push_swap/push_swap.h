@@ -61,6 +61,7 @@ int			move_cpy(t_moves *src, t_moves *dst);
 void		init_move(t_moves *mv);
 void		print_mv(t_moves *mv);
 int			full_a(t_two_stacks *s);
+int			full_a_v2(t_two_stacks *s);
 
 /*
 ** tools

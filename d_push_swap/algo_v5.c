@@ -220,7 +220,7 @@ int	algo_v5(t_two_stacks *s)
 	t_moves best;
 	int		max_mv;
 
-	max_mv = s->stack_size * 40 / 100;
+	max_mv = s->stack_size ;//* 40 / 100;
 	if (max_mv < 2)
 		max_mv += 1;
 	while (!is_a_empty(s))
@@ -228,7 +228,9 @@ int	algo_v5(t_two_stacks *s)
 		seek_best_move(s, &best, max_mv);
 		execute_best_move(s, &best);
 	}
-	full_a(s);
+	//full_a(s);
+	//ft_print_two_stacks(s);
+	full_a_v2(s);
 	//ft_print_two_stacks(s);
 	return (0);
 }

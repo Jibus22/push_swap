@@ -14,7 +14,7 @@ long	ft_diff(int a, int b)
 {
 	long diff;
 
-	diff =  a - b;
+	diff =  (long)a - (long)b;
 	if (diff < 0)
 		diff *= -1;
 	return (diff);
