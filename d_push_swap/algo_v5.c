@@ -14,7 +14,7 @@ int	select_shortest_mv(t_moves *tmp, t_moves *above)
 
 int	best_move_a_to_b(t_two_stacks *s, t_moves *best)
 {
-	t_moves tmp;
+	t_moves	tmp;
 	int		index;
 
 	init_move(best);
@@ -53,7 +53,7 @@ int	execute_best_move(t_two_stacks *s, t_moves *best)
 
 int	algo_v5(t_two_stacks *s)
 {
-	t_moves best;
+	t_moves	best;
 
 	while (!is_a_empty(s))
 	{

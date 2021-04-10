@@ -33,11 +33,11 @@ typedef struct s_moves
 	int	moves_a;
 	int	index_b;
 	int	way_b;
-	int way_b_after;
+	int	way_b_after;
 	int	moves_b;
-	int common_moves;
+	int	common_moves;
 	int	common_way;
-	int total_moves;
+	int	total_moves;
 }	t_moves;
 
 /*

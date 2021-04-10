@@ -13,7 +13,7 @@ static int	compare_instructions(t_list *instructions, char *name[])
 		{
 			cmp = ft_strcmp(name[i], (char *)(instructions->content));
 			if (cmp == 0)
-				break;
+				break ;
 			i++;
 		}
 		if (cmp)

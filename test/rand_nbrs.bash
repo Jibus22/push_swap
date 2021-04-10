@@ -39,6 +39,11 @@ if [ $1 ]; then
 		ARG=$(python3 -c 'import random;\
 			randomlist = random.sample(range(-2147483648, 2147483647), 1000);\
 			print(randomlist)' | tr -d ',[]')
+	else
+		echo "rand_error: value not handled."
+		echo "handled values : 3, 4, 5, 10, 30, 50, 100, 500, 1000"
+		echo "Ciao kiss bye"
+		exit;
 	fi
 fi
 

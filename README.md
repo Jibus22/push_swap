@@ -1,40 +1,25 @@
-# ALGO PUSH A TO B :
-## Concept
- On essaye de placer au mieux `[topA-n -- topA+n]`  dans la stack B.
- Pour cela on calcule avant toute chose le nombre de moves nécessaire pour
- placer chaque `2n` valeurs et on garde le plus efficace.
- 
-## La logique est :
- Pour chaque valeurs de A dans `[(topA - n) - (topA + n)]`, est
- calculé le nombre de moves nécéssaire à son placement idéal dans B.
- Cela implique donc des moves dans A ainsi que des moves dans B.
- Il faut dès lors prendre en compte les doubles moves (`RR`, `RRR`).
+# Doc
+https://fr.wikipedia.org/wiki/Analyse_de_la_complexit%C3%A9_des_algorithmes
+https://en.wikipedia.org/wiki/Best,\_worst_and_average_case
+https://en.wikipedia.org/wiki/Sorting_algorithm#Comparison_of_algorithms
+https://en.wikipedia.org/wiki/Search_data_structure#Asymptotic_amortized_worst-case_analysis
+https://en.wikipedia.org/wiki/Data_structure
+https://en.wikipedia.org/wiki/Random_access
+https://en.wikipedia.org/wiki/Stack_(abstract_data_type)
+https://en.wikipedia.org/wiki/Computational_complexity_theory
+https://www.geeksforgeeks.org/stack-data-structure-introduction-program/
+https://www.geeksforgeeks.org/implement-two-stacks-in-an-array/
+# Algo Push_swap
+## Concept ⚙️
+After many tests and reasearchs it appeared that the best solution to have best results was to put all the numbers in stack B in the good descending order.
+So the scale to search the good value in **A** to put in **B** in the whole **A stack**.
+But as we don't want to run the half of the stack to put the right **A** value to the top of **B**, we prefer to see on each **A value** the perfect spot in **B** and how many moves it takes to drop it off.
 
- La valeur qui sera déplacée dans B sera celle qui implique le moins de moves.
- 
-## Une limite de moves doit être donnée.
- Si la stack B mesure 100 et qu'il faut faire 45 rotate pour placer
- notre valeur, on ne valide pas ce move trop important et on préfere soit :
- - Poper la valeur sur le bottom de A si cela permet de faire une suite.
- - Pusher sur topB même si ça crée un "désordre".
-
- De fait, on se retrouve avec une stack A avec plusieurs suites en pyramide
- ascendante, et descendante pour la B.
-
-
-## Boucle infinie ?
- Que faire si on se retrouve vers une fin de stack A et que les potentielles
- valeurs à push sur B sont en dehors de la limite de moves donnée ?
- Il y a ici un risque de boucle infinie à RA sans arrêt.
-
- On peut garder en mémoire un index de la première suite créée. Cet index
- est mis à jour à chaque `RA`.
- Dès lors qu'il est atteint on sait qu'on a un potentiel risque et on change
- alors le comportement de l'algo :
- Il faut tout pousser sur la stack B de manière intelligente.
- - Si on arrive pas à placer les valeurs dans la stack B on les push au top en conservant une logique d'ordre décroissant.
-
-
-# ALGO PUSH B TO A :
-
- <3
+We finally choose the combination of **A value/B spot** which takes the less moves to be achieved.
+### A to B
+While A is not empty, we look for the best move (shortest) to be achieved.
+We execute this move then search for the next best move. And so on.
+### B to A
+B stack is sorted in a descending way but it doesn't necessarily starts from the highest or smallest value.
+As we need to have the highest value at the bottom of A and the smallest at the top to get the ascending order we want, we just need to move the highest value of B to its top then push them all.
+End of game.

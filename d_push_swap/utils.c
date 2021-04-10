@@ -12,9 +12,9 @@ int	is_a_empty(t_two_stacks *s)
 
 long	ft_diff(int a, int b)
 {
-	long diff;
+	long	diff;
 
-	diff =  (long)a - (long)b;
+	diff = (long)a - (long)b;
 	if (diff < 0)
 		diff *= -1;
 	return (diff);

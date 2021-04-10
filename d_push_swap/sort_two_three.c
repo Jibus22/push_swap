@@ -4,7 +4,7 @@ int	switch_bth_a(t_two_stacks *s)
 {
 	if (s->array[0] > s->array[s->top_a]
 		&& s->array[s->top_a] < s->array[s->top_a - 1])
-			n_rra(s);
+		n_rra(s);
 	if (s->array[0] < s->array[s->top_a]
 		&& s->array[s->top_a] > s->array[s->top_a - 1])
 	{
@@ -17,7 +17,7 @@ int	switch_bth_a(t_two_stacks *s)
 		&& s->array[s->top_a] < s->array[s->top_a - 1])
 		n_rra(s);
 	if (s->array[0] > s->array[s->top_a]
-			&& s->array[s->top_a] > s->array[s->top_a - 1])
+		&& s->array[s->top_a] > s->array[s->top_a - 1])
 		n_sa(s);
 	return (0);
 }

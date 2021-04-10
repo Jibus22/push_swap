@@ -2,10 +2,10 @@
 
 int	*convert_argv_to_int_array(int array_size, char *args[])
 {
-	int		*array;
-	char	*endptr;
+	int			*array;
+	char		*endptr;
 	long long	tmp;
-	int		i;
+	int			i;
 
 	array = (int *)malloc(sizeof(*array) * array_size);
 	if (!array)

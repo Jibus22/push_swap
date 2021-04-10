@@ -17,7 +17,8 @@ int	set_common_moves(t_moves *tmp)
 		tmp->common_moves = ft_less(tmp->moves_a, tmp->moves_b);
 		tmp->moves_a -= tmp->common_moves;
 		tmp->moves_b -= tmp->common_moves;
-		tmp->total_moves = tmp->common_moves + ft_more(tmp->moves_a, tmp->moves_b);
+		tmp->total_moves = tmp->common_moves
+			+ ft_more(tmp->moves_a, tmp->moves_b);
 	}
 	else if (tmp->way_a == N_RRA && tmp->way_b == N_RRB)
 	{
@@ -25,7 +26,8 @@ int	set_common_moves(t_moves *tmp)
 		tmp->common_moves = ft_less(tmp->moves_a, tmp->moves_b);
 		tmp->moves_a -= tmp->common_moves;
 		tmp->moves_b -= tmp->common_moves;
-		tmp->total_moves = tmp->common_moves + ft_more(tmp->moves_a, tmp->moves_b);
+		tmp->total_moves = tmp->common_moves
+			+ ft_more(tmp->moves_a, tmp->moves_b);
 	}
 	else
 		tmp->total_moves = tmp->moves_a + tmp->moves_b;

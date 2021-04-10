@@ -1,12 +1,12 @@
 #include "checker.h"
 
-static void	ps_error()
+static void	ps_error(void)
 {
 	ft_putstr_fd("KO\n", 1);
 	return ;
 }
 
-static void	ps_success()
+static void	ps_success(void)
 {
 	ft_putstr_fd("OK\n", 1);
 	return ;

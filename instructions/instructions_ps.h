@@ -25,6 +25,7 @@ int				ft_pop_b(t_two_stacks *s);
 void			ft_print_two_stacks(t_two_stacks *s);
 void			ft_free_two_stacks(t_two_stacks *s);
 int				*convert_argv_to_int_array(int array_size, char *args[]);
+
 void			fill_stack_with_int_array(t_two_stacks *s,
 					int *array, int size);
 int				check_duplicates(int *arr, int size);

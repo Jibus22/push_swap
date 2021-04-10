@@ -3,13 +3,13 @@
 void	print_mv(t_moves *mv)
 {
 	printf("````````````````````````````````````````\n");
-	printf("_____A______--index: %d\tway: %d\tmoves: %d\n",\
+	printf("_____A______--index: %d\tway: %d\tmoves: %d\n",
 		mv->index_a, mv->way_a, mv->moves_a);
-	printf("_____B______--index: %d\tway: %d\tmoves: %d\n",\
+	printf("_____B______--index: %d\tway: %d\tmoves: %d\n",
 		mv->index_b, mv->way_b, mv->moves_b);
-	printf("___COMMON___--way: %d\tmoves: %d\ttotal_mv: %d\n",\
+	printf("___COMMON___--way: %d\tmoves: %d\ttotal_mv: %d\n",
 		mv->common_way, mv->common_moves, mv->total_moves);
-	printf("___UTILS____--init: %d\tway_b_after: %d\t\n",\
+	printf("___UTILS____--init: %d\tway_b_after: %d\t\n",
 		mv->init, mv->way_b_after);
 	printf("````````````````````````````````````````\n");
 	fflush(stdout);
