@@ -20,13 +20,14 @@ OBJPATH = $(SRCPATH)/obj
 INC_CHECKER = .
 INC_INSTRUCTIONS = $(PS_INSTRUCTIONS_PATH)
 INC_LIBFT = $(LIBFTPATH)
+INC = $(addprefix -I , $(INC_LIBFT) $(INC_INSTRUCTIONS) $(INC_CHECKER))
 
 ##### INCLUDES DEPENDENCIES  ---  any modif in any .h will alert makefile to compile again
 INC_DEP = $(INC_CHECKER)/*.h
 
 ##### LIB #####
 LIBFT = $(LIBFTPATH)/libft.a
-PS_INSTRUCTIONS = $(PS_INSTRUCTIONS_PATH)/ps_instructions.a
+PS_INSTRUCTIONS = $(PS_INSTRUCTIONS_PATH)/libps_instructions.a
 
 ##### FLAG #####
 CC = clang
@@ -64,7 +65,7 @@ mk_instructions :
 
 $(NAME) : message $(OBJ) $(INC_DEP)
 	@echo "\n$(END)$(BLUE)# Making $(NAME) #$(END)$(GREY)"
-	$(CC) -o $@ $(OBJ) $(LIBFT) $(PS_INSTRUCTIONS)
+	$(CC) -o $@ $(OBJ) $(PS_INSTRUCTIONS) $(LIBFT)
 	@echo "\n$(END)$(GREEN)# $(NAME) is built #$(END)"
 
 message :
@@ -72,8 +73,7 @@ message :
 
 
 $(OBJPATH)/%.o : $(SRCPATH)/%.c $(INC_DEP)
-	$(CC) $(FLAGS) -I $(INC_LIBFT) -I $(INC_CHECKER) \
-	-I $(INC_INSTRUCTIONS) -c $< -o $@
+	$(CC) $(FLAGS) $(INC) -c $< -o $@
 
 
 ### CLEAN ###

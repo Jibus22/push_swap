@@ -1,4 +1,4 @@
-NAME = ps_instructions.a
+NAME = libps_instructions.a
 
 ##### COLORS #####
 BLUE = \033[1;36m
@@ -29,7 +29,7 @@ SRC = $(addprefix $(SRCPATH)/, ft_create_two_stacks.c ft_push.c \
 	  check_duplicates.c init_stack.c)
 
 ##### OBJS #####
-OBJ = $(SRC:%.c=$(OBJDIR)/%.o)
+OBJ = $(SRC:$(SRCPATH)/%.c=$(OBJDIR)/%.o)
 
 
 
@@ -42,7 +42,7 @@ mk_libft :
 	@if [ ! -f $(LIBFT) ]; then make -C $(LIBFTPATH); fi
 
 $(NAME) : message $(OBJ)
-	@ar rcs $@ $(OBJ)
+	@ar rcs $@ $(OBJ) $(LIBFT)
 	@echo "$(BLUE)$@ is built !$(END)"
 
 message :
