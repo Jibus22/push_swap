@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   sort_two_three.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: user42 <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/04/11 01:26:38 by user42            #+#    #+#             */
+/*   Updated: 2021/04/11 01:26:49 by user42           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
-int	switch_bth_a(t_two_stacks *s)
+int		switch_bth_a(t_two_stacks *s)
 {
 	if (s->array[0] > s->array[s->top_a]
 		&& s->array[s->top_a] < s->array[s->top_a - 1])
@@ -29,7 +41,7 @@ void	sort_three_a(t_two_stacks *s)
 		switch_bth_a(s);
 }
 
-int	sort_two(t_two_stacks *s)
+int		sort_two(t_two_stacks *s)
 {
 	if (s->array[s->top_a] > s->array[s->top_a - 1])
 		n_sa(s);

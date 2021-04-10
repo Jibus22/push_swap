@@ -6,7 +6,7 @@
 /*   By: jle-corr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/25 16:16:32 by jle-corr          #+#    #+#             */
-/*   Updated: 2021/03/20 16:36:13 by jle-corr         ###   ########.fr       */
+/*   Updated: 2021/04/11 01:43:30 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ static void	fill_ltoa(long n, char *str, int i)
 		str[i] = '-';
 }
 
-char	*ft_ltoa(long n)
+char		*ft_ltoa(long n)
 {
 	char		*str;
 	int			i;

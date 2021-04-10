@@ -1,16 +1,28 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   instructions_ps.h                                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: user42 <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/04/11 01:35:20 by user42            #+#    #+#             */
+/*   Updated: 2021/04/11 01:37:51 by user42           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef INSTRUCTIONS_PS_H
 # define INSTRUCTIONS_PS_H
 
 # include <stdio.h>
 # include "libft.h"
 
-typedef struct s_two_stacks
+typedef struct	s_two_stacks
 {
 	int	stack_size;
 	int	*array;
 	int	top_a;
 	int	top_b;
-}	t_two_stacks;
+}				t_two_stacks;
 
 /*
 ** Main stack functions

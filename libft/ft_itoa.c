@@ -6,7 +6,7 @@
 /*   By: jle-corr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/03 16:16:32 by jle-corr          #+#    #+#             */
-/*   Updated: 2021/03/20 16:25:06 by jle-corr         ###   ########.fr       */
+/*   Updated: 2021/04/11 01:42:18 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ static void	fill_itoa(int n, char *str, int i)
 		str[i] = '-';
 }
 
-char	*ft_itoa(int n)
+char		*ft_itoa(int n)
 {
 	char		*str;
 	int			i;

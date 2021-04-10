@@ -6,13 +6,13 @@
 /*   By: jle-corr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/08 18:04:52 by jle-corr          #+#    #+#             */
-/*   Updated: 2021/03/20 15:20:20 by jle-corr         ###   ########.fr       */
+/*   Updated: 2021/04/11 01:39:15 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	split_counter(char const *s, char c)
+int			split_counter(char const *s, char c)
 {
 	char	*spliter;
 	int		i;
@@ -39,7 +39,7 @@ char const	*ternarie_ret(char *adr)
 		return (NULL);
 }
 
-char	**ft_split(char const *s, char c)
+char		**ft_split(char const *s, char c)
 {
 	char	**tab;
 	char	*adr;

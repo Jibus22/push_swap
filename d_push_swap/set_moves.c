@@ -1,10 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   set_moves.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: user42 <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/04/11 01:25:38 by user42            #+#    #+#             */
+/*   Updated: 2021/04/11 01:27:50 by user42           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
 /*
 ** Once all necessary moves in A & B had been set up into t_moves struct
 ** this function check if there is some twins moves. If there is, it will
 ** set up the corresponding common moves with the twins instructions (rr, rrr).
-** 
+**
 ** For example, instead of doing rb rb & ra ra, we can now do rr rr. This lead
 ** us in this example to use only 2 instructions instead of 4.
 */

@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   sort_four_five.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: user42 <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/04/11 01:26:16 by user42            #+#    #+#             */
+/*   Updated: 2021/04/11 01:26:32 by user42           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
 static int	shortest_way_to_top_a(int small, int *i, int size)
@@ -19,7 +31,7 @@ static int	shortest_way_to_top_a(int small, int *i, int size)
 	return (way);
 }
 
-void	sort_five(t_two_stacks *s)
+void		sort_five(t_two_stacks *s)
 {
 	int	index;
 	int	way;
@@ -42,7 +54,7 @@ void	sort_five(t_two_stacks *s)
 	n_pa(s);
 }
 
-void	sort_four(t_two_stacks *s)
+void		sort_four(t_two_stacks *s)
 {
 	int	small;
 	int	way;

@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   verify_instructions.c                              :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: user42 <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/04/11 01:19:55 by user42            #+#    #+#             */
+/*   Updated: 2021/04/11 01:20:39 by user42           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "checker.h"
 
 static int	compare_instructions(t_list *instructions, char *name[])
@@ -26,7 +38,7 @@ static int	compare_instructions(t_list *instructions, char *name[])
 	return (0);
 }
 
-int	verify_instructions(t_list *instructions)
+int			verify_instructions(t_list *instructions)
 {
 	char	*name[12];
 

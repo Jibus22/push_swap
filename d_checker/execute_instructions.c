@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   execute_instructions.c                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: user42 <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/04/11 01:19:44 by user42            #+#    #+#             */
+/*   Updated: 2021/04/11 01:21:09 by user42           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "checker.h"
 
-int	which_instruction(char *instr)
+int		which_instruction(char *instr)
 {
 	char	*name[12];
 	int		code;
@@ -52,7 +64,7 @@ void	execute_it(t_two_stacks *s, int code)
 		ps_rrr(s);
 }
 
-int	execute_instructions(t_list *instructions, t_two_stacks *s)
+int		execute_instructions(t_list *instructions, t_two_stacks *s)
 {
 	int	instruct_code;
 

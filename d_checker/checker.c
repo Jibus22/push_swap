@@ -1,11 +1,23 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   checker.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: user42 <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/04/11 01:18:57 by user42            #+#    #+#             */
+/*   Updated: 2021/04/11 01:22:08 by user42           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "checker.h"
 
-void	clear_instructions(void *content)
+void			clear_instructions(void *content)
 {
 	free((char *)content);
 }
 
-static int	add_instruction_to_list(t_list **head, char *line)
+static int		add_instruction_to_list(t_list **head, char *line)
 {
 	t_list	*new;
 
@@ -40,7 +52,7 @@ static t_list	*loop(t_two_stacks *s)
 	return (instructions);
 }
 
-int	main(int ac, char *av[])
+int				main(int ac, char *av[])
 {
 	t_list			*instructions;
 	t_two_stacks	*stack;

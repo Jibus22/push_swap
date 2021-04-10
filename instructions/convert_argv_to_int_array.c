@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   convert_argv_to_int_array.c                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: user42 <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/04/11 01:34:09 by user42            #+#    #+#             */
+/*   Updated: 2021/04/11 01:37:19 by user42           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "instructions_ps.h"
 
 int	*convert_argv_to_int_array(int array_size, char *args[])
@@ -21,7 +33,7 @@ int	*convert_argv_to_int_array(int array_size, char *args[])
 			free(array);
 			return (NULL);
 		}
-		array[i - 1] = (int) tmp;
+		array[i - 1] = (int)tmp;
 		i++;
 	}
 	return (array);

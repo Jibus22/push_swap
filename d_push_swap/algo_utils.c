@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   algo_utils.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: user42 <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/04/11 01:23:34 by user42            #+#    #+#             */
+/*   Updated: 2021/04/11 01:23:44 by user42           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
 void	print_mv(t_moves *mv)
@@ -30,7 +42,7 @@ void	init_move(t_moves *mv)
 	mv->total_moves = 0;
 }
 
-int	move_cpy(t_moves *src, t_moves *dst)
+int		move_cpy(t_moves *src, t_moves *dst)
 {
 	dst->init = src->init;
 	dst->index_a = src->index_a;
