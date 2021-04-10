@@ -53,6 +53,7 @@ int	main(int ac, char *av[])
 	if (!instructions)
 	{
 		check_stacks(stack);
+		ft_free_two_stacks(stack);
 		return (0);
 	}
 	ret = 0;

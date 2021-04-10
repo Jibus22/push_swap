@@ -8,7 +8,10 @@ int	main(int ac, char *av[])
 	if (!stack)
 		return (1);
 	if (is_stack_sorted(stack))
+	{
+		ft_free_two_stacks(stack);
 		return (0);
+	}
 	if (stack->stack_size == 1)
 		;
 	else if (stack->stack_size == 2)
@@ -21,6 +24,7 @@ int	main(int ac, char *av[])
 		sort_five(stack);
 	else
 		algo_v5(stack);
+	ft_free_two_stacks(stack);
 	return (0);
 }
 

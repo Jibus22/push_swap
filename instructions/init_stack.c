@@ -14,9 +14,13 @@ t_two_stacks	*init_stack(int ac, char *av[])
 		return (NULL);
 	arr = convert_argv_to_int_array(size_array, av);
 	if (!arr)
+	{
+		ft_free_two_stacks(stack);
 		return (NULL);
+	}
 	if (check_duplicates(arr, size_array) == -1)
 	{
+		ft_free_two_stacks(stack);
 		free(arr);
 		return (NULL);
 	}
